@@ -42,7 +42,9 @@ def build_table(categories):
 
 def build_factor(category):
     # Load the first state as an accumulator.
-    acc_df = read_format_json(category, 'AK')
+    first_state = STATE_DF.index[0]
+    state_abbr = STATE_DF.iloc[first_state].loc['USPS']
+    acc_df = read_format_json(category, state_abbr)
     for i in STATE_DF.index[1:]:
         state_abbr = STATE_DF.iloc[i].loc['USPS']
         df0 = read_format_json(category, state_abbr)
