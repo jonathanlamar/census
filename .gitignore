@@ -1,0 +1,7 @@
+*.csv
+*.tsv
+*.out
+.DS_Store
+.ipynb_checkpoints/
+*.json
+api_key.txt
