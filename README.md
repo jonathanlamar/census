@@ -13,6 +13,9 @@ I would imagine I can find better ways of getting a census dataset indexed by GE
 4. Run the command `python build_table.py population income household tenure marriage education` to build the table.  This will not take as much time.
 5. Boot up the jupyter notebook `Rename Columns.ipynb` and execute it.  This renames the columns to something sensible.
 
+#### Shape files
+Shape files for every census tract in the US can be found [here](https://www.census.gov/geo/maps-data/data/cbf/cbf_tracts.html).  I added a script in `./data/shapefiles` to scrape this page for you - all you should have to do is run `python get_shapefiles.py`.  It is written for mac, but could easily be changed to work on linux.  I plan to use the shapefiles for some fun visuals, but I havenn't planned out anything yet.
+
 ## Glossary of Terms
 1. GEOID.  See [here](https://www.census.gov/geo/reference/geoidentifiers.html)
 2. ACS.  The American Community Survey.  See [here](https://en.wikipedia.org/wiki/American_Community_Survey).  We are using the 2015 5 year estimates to build our dataset.

@@ -5,3 +5,9 @@
 .ipynb_checkpoints/
 *.json
 api_key.txt
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.xml
+*.shx
