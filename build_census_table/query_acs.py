@@ -68,7 +68,8 @@ if __name__ == '__main__':
         'marriage' : ['B12001_00' + str(n) + 'E' for n in [3, 4, 9]]
             + ['B12001_0' + str(n) + 'E' for n in [10, 12, 13, 18, 19]],
         'education' : ['B15003_00' + str(n) + 'E' for n in range(2, 10)]
-            + ['B15003_0' + str(n) + 'E' for n in range(10, 26)]
+            + ['B15003_0' + str(n) + 'E' for n in range(10, 26)],
+        'race' : ['B01001' + letter + '_001E' for letter in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']]
     }
 
     # Make sure you get one of these first.

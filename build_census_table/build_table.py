@@ -135,7 +135,8 @@ if __name__ == '__main__':
         'household' : ('household' in sys.argv),
         'tenure' : ('tenure' in sys.argv),
         'marriage' : ('marriage' in sys.argv),
-        'education' : ('education' in sys.argv)
+        'education' : ('education' in sys.argv),
+        'race' : ('race' in sys.argv)
     }
 
     # Compile the census info here.
