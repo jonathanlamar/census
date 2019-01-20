@@ -45,7 +45,10 @@ def build_factor(category):
     acc_df = read_format_json(category, state_abbr)
     for i in STATE_DF.index[1:]:
         state_abbr = STATE_DF.iloc[i].loc['USPS']
-        df0 = read_format_json(category, state_abbr)
+        try:
+            df0 = read_format_json(category, state_abbr)
+        except:
+            raise RuntimeError('Failed to collect ' + category + ' json for ' + state_abbr)
         acc_df = pd.concat([acc_df, df0], axis=0)
 
     # We want to have a dataset indexed by GEOID.
@@ -123,9 +126,10 @@ if __name__ == '__main__':
     DTYPES = {'geo_id' : str}
 
     # For some reason this is super slow.  Better to just save the json from chrome.
-    #print('Curling variables json...')
+    print('Curling variables json...')
     #os.system('curl "https://api.census.gov/data/2015/acs5/variables.json" > ' + DATAPATH + 'json/variables.json')
-    print('Done.\nLoading variables json to df...')
+    #print('Done.\nLoading variables json to df...')
+
     VARIABLES_DF = pd.read_json(DATAPATH + 'json/variables.json')
     print('Done.')
 

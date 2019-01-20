@@ -76,7 +76,7 @@ if __name__ == '__main__':
     api_key = sys.argv[1]
     categories = sys.argv[2:]
 
-    URL_PREFIX = 'https://api.census.gov/data/2015/acs5?get=' # prefix for all curl statements
+    URL_PREFIX = 'https://api.census.gov/data/2017/acs/acs5?get=' # prefix for all curl statements
     URL_SUFFIX = '&for=tract:*&in=state:' # suffix (+ state code + API key)
     KEYSTRING = '&key=' + api_key
 
