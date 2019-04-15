@@ -1,8 +1,5 @@
 # Census
 
-## Overview of the Project
-*TODO*: Come up with a project.
-
 ## Generating the dataset
 I would imagine I can find better ways of getting a census dataset indexed by GEOID, but I settled on using the 2015 ACS, which has a web API.  This survey has thousands of fields available, all indexed by GEOID.
 
